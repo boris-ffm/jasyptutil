@@ -8,10 +8,14 @@ public class Cryptor {
      * @param args  1 - enc/dec,  2 - value to encrypt/decrypt,  3 - key
      */
     public static void main(String[] args) {
-        if (args.length != 3 && !args[0].equals("enc") && !args[0].equals("dec")) {
+        if (args.length != 3 || (!args[0].equals("enc") && !args[0].equals("dec"))) {
             help();
             System.exit(-1);
         }
+        System.out.println("Modus:\t" + args[0]);
+        System.out.println("Wert:\t" + args[1]);
+        System.out.println("Key:\t" + args[2]);
+
         if (args[0].equals("enc")) {
             System.out.println(encrypt(args[1], args[2]));
         } else {
