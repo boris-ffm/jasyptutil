@@ -5,7 +5,7 @@ import org.jasypt.util.text.AES256TextEncryptor;
 public class Cryptor {
 
     /**
-     * @param args  1 - enc/dec,  2 - value to encrypt/decrypt,  3 - key
+     * @param args  1 - enc/dec,  2 - Secret  3 - value to encrypt/decrypt,cd ..cd
      */
     public static void main(String[] args) {
         if (args.length != 3 || (!args[0].equals("enc") && !args[0].equals("dec"))) {
